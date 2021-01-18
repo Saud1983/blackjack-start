@@ -28,7 +28,7 @@ def final():
 def check_11(checker):
   total=sum(checker)
   if 11 in checker and total > 21:
-    print(checker)
+    # print(checker)
     counter=0
     for index, value in enumerate(checker):
       if value ==11 and counter == 0:
