@@ -3,8 +3,15 @@ from art import logo
 import random
 
 def random_selection():
-  selected_card=random.choice(list(cards))
+  selected_type=random.choice(list(cards))
+  # print(selected_type)
+  # print(cards[selected_type])
+  selected_card=random.choice(cards[selected_type])
+  # print(selected_card)
+  cards[selected_type].remove(selected_card)
+  # print(cards[selected_type])
   return selected_card
+
 
 def final():
   (f"  Your final hand: {player}, final score:  ",  sum(player))
@@ -46,7 +53,20 @@ else:
   answer=True
 
 while answer:
-  cards=[11,2,3,4,5,6,7,8,9,10,10,10,10]
+  values=[11,2,3,4,5,6,7,8,9,10,10,10,10]
+  # values=[11,11,11,10,11,8,9]
+  val1=values.copy()
+  val2=values.copy()
+  val3=values.copy()
+  val4=values.copy()
+
+  cards={
+    "Speet":val1,
+    "Hass":val2,
+    "Sheria":val3,
+    "deman":val4
+    }
+
 
   player=[]
   dealer=[]
